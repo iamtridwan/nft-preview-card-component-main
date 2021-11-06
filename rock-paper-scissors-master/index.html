@@ -1,37 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css" />
 
-  Score
-  Rules
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
-  You Picked
-  The House Picked
+    <body>
+      <!-- header -->
+      <header>
+        <img src="./images/logo-bonus.svg" alt="game logo" />
+        <div class="score_board">
+          <p>score</p>
+          <h1>12</h1>
+        </div>
+      </header>
 
-  You Win
-  You Lose
+      <!-- main -->
+      <main>
+        <!-- top btn -->
+        <div class="top">
+          <!-- scissors -->
+          <article class="scissors">
+            <div class="grey">
+              <div class="scissors_img"></div>
+            </div>
+          </article>
+        </div>
+        <!-- middle btn -->
+        <div class="mid">
+          <!-- spock -->
+          <article class="spock">
+            <div class="grey">
+              <div class="spock_img"></div>
+            </div>
+          </article>
+          <!-- paper -->
+          <article class="paper">
+            <div class="grey">
+              <div class="paper_img"></div>
+            </div>
+          </article>
+        </div>
+        <div class="bottom">
+          <article class="lizard">
+            <div class="grey">
+              <div class="lizard_img"></div>
+            </div>
+          </article>
+          <article class="rock">
+            <div class="grey">
+              <div class="rock_img"></div>
+            </div>
+          </article>
+        </div>
+      </main>
 
-  Play Again
+      <div class="btn">
+        <button>Rules</button>
+      </div>
+    </body>
+    <!-- Score  You Picked The House Picked You Win You Lose Play Again -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>

@@ -1,0 +1,244 @@
+:root {
+  --Background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  --ScoreText: hsl(229, 64%, 46%);
+  --DarkText: hsl(229, 25%, 31%);
+  --HeaderOutline: hsl(217, 16%, 45%);
+  --font: "Barlow Semi Condensed";
+  --ScissorsGradient: linear-gradient(
+    to bottom,
+    hsl(39, 89%, 49%),
+    hsl(40, 84%, 53%)
+  );
+  --PaperGradient: linear-gradient(
+    to bottom,
+    hsl(230, 89%, 62%),
+    hsl(230, 89%, 65%)
+  );
+  --RockGradient: linear-gradient(
+    to bottom,
+    hsl(349, 71%, 52%),
+    hsl(349, 70%, 56%)
+  );
+  --LizardGradient: linear-gradient(
+    to bottom,
+    hsl(261, 73%, 60%),
+    hsl(261, 72%, 63%)
+  );
+  --Cyan: linear-gradient(to bottom, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+}
+
+body {
+  background: var(--Background);
+  color: var(--HeaderOutline);
+  font-family: var(--font);
+}
+
+header {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border: 2px solid var(--HeaderOutline);
+  border-radius: 15px;
+}
+
+.score_board {
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 10px 15px;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: -10px 0 0 0;
+  color: var(--DarkText);
+  padding: 0;
+}
+.score_board p {
+  margin: 0;
+  font-size: 18px;
+  color: var(--ScoreText);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+/* general styling */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "t"
+    "m"
+    "b";
+  row-gap: 10px;
+  background: url(./images/bg-pentagon.svg) no-repeat center;
+  width: 90%;
+  margin: 40px auto;
+}
+article {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.top {
+  grid-area: t;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 110%;
+  grid-area: m;
+  position: relative;
+  left: -10px;
+  top: -30px;
+}
+
+.bottom {
+  grid-area: b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+.scissors::after,
+.spock::after,
+.paper::after,
+.lizard::after,
+.rock::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.scissors::before,
+.spock::before,
+.paper::before,
+.lizard::before,
+.rock::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14%;
+  background-color: #e1e1e1;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.scissors_img,
+.spock_img,
+.paper_img,
+.lizard_img,
+.rock_img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  z-index: 100;
+  transform: translateY(3px);
+}
+
+/* scissors */
+.scissors {
+  background: var(--ScissorsGradient);
+  position: relative;
+}
+
+.scissors::after {
+  background-color: hsl(24, 99%, 48%);
+}
+.scissors_img {
+  background: #ffffff url(./images/icon-scissors.svg) no-repeat center;
+}
+
+/* spock */
+
+.spock {
+  background: var(--Cyan);
+  position: relative;
+}
+.spock::after {
+  background-color: hsl(189, 96%, 32%);
+}
+
+.spock_img {
+  background: #ffffff url(./images/icon-spock.svg) no-repeat center;
+}
+/* paper */
+
+.paper {
+  background: var(--PaperGradient);
+  position: relative;
+}
+.paper::after {
+  background-color: hsl(230, 91%, 32%);
+}
+.paper_img {
+  background: #ffffff url(./images/icon-paper.svg) no-repeat center;
+}
+
+/* lizard */
+
+.lizard {
+  background: var(--LizardGradient);
+  position: relative;
+}
+
+.lizard::after {
+  background-color: hsl(261, 92%, 39%);
+}
+
+.lizard_img {
+  background: #ffffff url(./images/icon-lizard.svg) no-repeat center;
+}
+
+/* rock */
+
+.rock {
+  background: var(--RockGradient);
+  position: relative;
+}
+
+.rock::after {
+  background-color: hsl(349, 86%, 36%);
+}
+
+.rock_img {
+  background: #ffffff url(./images/icon-rock.svg) no-repeat center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6rem 0 40px 0;
+}
+
+button {
+  background-color: transparent;
+  padding: 8px 20px;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  font-family: var(--font);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  display: block;
+}
