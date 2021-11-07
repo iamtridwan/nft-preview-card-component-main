@@ -69,62 +69,7 @@ h1 {
   text-transform: uppercase;
   font-weight: 700;
 }
-/* general styling */
 
-main {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "t"
-    "m"
-    "b";
-  row-gap: 10px;
-  background: url(./images/bg-pentagon.svg) no-repeat center;
-  width: 90%;
-  margin: 40px auto;
-}
-main a {
-  width: 110px;
-  height: 110px;
-  display: block;
-  text-decoration: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-a:focus {
-  outline: 5px dotted white;
-}
-.top {
-  grid-area: t;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mid {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 110%;
-  grid-area: m;
-  position: relative;
-  left: -15px;
-  top: -30px;
-}
-
-.bottom {
-  grid-area: b;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 80%;
-  margin: auto;
-}
 .scissors::after,
 .spock::after,
 .paper::after,
@@ -176,7 +121,7 @@ a:focus {
   background-color: hsl(24, 99%, 48%);
 }
 .scissors_img {
-  background: #ffffff url(./images/icon-scissors.svg) no-repeat center;
+  background: #ffffff url(../images/icon-scissors.svg) no-repeat center;
 }
 
 /* spock */
@@ -190,7 +135,7 @@ a:focus {
 }
 
 .spock_img {
-  background: #ffffff url(./images/icon-spock.svg) no-repeat center;
+  background: #ffffff url(../images/icon-spock.svg) no-repeat center;
 }
 /* paper */
 
@@ -202,7 +147,7 @@ a:focus {
   background-color: hsl(230, 91%, 32%);
 }
 .paper_img {
-  background: #ffffff url(./images/icon-paper.svg) no-repeat center;
+  background: #ffffff url(../images/icon-paper.svg) no-repeat center;
 }
 
 /* lizard */
@@ -217,7 +162,7 @@ a:focus {
 }
 
 .lizard_img {
-  background: #ffffff url(./images/icon-lizard.svg) no-repeat center;
+  background: #ffffff url(../images/icon-lizard.svg) no-repeat center;
 }
 
 /* rock */
@@ -232,7 +177,7 @@ a:focus {
 }
 
 .rock_img {
-  background: #ffffff url(./images/icon-rock.svg) no-repeat center;
+  background: #ffffff url(../images/icon-rock.svg) no-repeat center;
 }
 
 .btn {
@@ -255,6 +200,7 @@ button {
   display: block;
   cursor: pointer;
 }
+
 /* modal */
 
 .modal {
@@ -287,7 +233,7 @@ button {
 }
 
 .show-modal .modal .modal-content button {
-  background: transparent url(./images/icon-close.svg) no-repeat center;
+  background: transparent url(../images/icon-close.svg) no-repeat center;
   padding: 15px;
   display: block;
   margin-top: 20px;
@@ -296,14 +242,6 @@ button {
   outline: 2px dotted var(--DarkText);
 }
 
-/* attribution */
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
 @media screen and (min-width: 768px) {
   header {
     width: 50%;
@@ -313,7 +251,7 @@ button {
   }
 
   .mid {
-    width: 70%;
+    width: 80%;
     grid-area: m;
     position: relative;
     margin: auto;
@@ -335,7 +273,7 @@ button {
 
   .show-modal .modal .modal-content {
     display: grid;
-    grid-template-columns: repeat(1fr, 2);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-template-areas:
       "r c"

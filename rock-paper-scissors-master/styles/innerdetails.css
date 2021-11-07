@@ -1,0 +1,98 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "y h"
+    "b b";
+  width: 80%;
+  margin: 2rem auto;
+  column-gap: 20px;
+  margin: 15vh auto 0 auto;
+}
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "c"
+    "t";
+  justify-items: center;
+}
+
+.user {
+  grid-area: y;
+}
+article {
+  width: 110px;
+  height: 110px;
+  display: block;
+  text-decoration: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  grid-area: c;
+}
+h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 30px 0 0 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+.blank {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: var(--DarkText);
+}
+.comps_pick {
+  grid-area: h;
+}
+
+/* play again button */
+.play_again {
+  width: 100%;
+  margin: 4em auto 1em auto;
+  grid-area: b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+
+.play_again h1 {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.play_again button {
+  background-color: #fff;
+  color: var(--DarkText);
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+  }
+
+  section {
+    display: block;
+  }
+  h3 {
+    margin: 0 0 3rem 0;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,68 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "t"
+    "m"
+    "b";
+  row-gap: 10px;
+  background: url(../images/bg-pentagon.svg) no-repeat center;
+  width: 90%;
+  margin: 40px auto;
+}
+main a {
+  width: 110px;
+  height: 110px;
+  display: block;
+  text-decoration: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+a:focus {
+  outline: 5px dotted white;
+}
+.top {
+  grid-area: t;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  grid-area: m;
+  position: relative;
+  top: -30px;
+}
+
+.bottom {
+  grid-area: b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .mid {
+    width: 32%;
+    grid-area: m;
+    position: relative;
+    margin: auto;
+    top: -30px;
+    left: -2px;
+  }
+
+  .bottom {
+    width: 24%;
+  }
+}

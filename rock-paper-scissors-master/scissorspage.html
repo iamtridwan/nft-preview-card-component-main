@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scissors Page</title>
+<link rel="stylesheet" href="./styles/utils.css">
+    <link rel="stylesheet" href="./styles/innerdetails.css">
+</head>
+<body>
+<!-- header -->
+     <header>
+        <img src="./images/logo-bonus.svg" alt="game logo" />
+        <div class="score_board">
+          <p>score</p>
+          <h1>12</h1>
+        </div>
+      </header>
+<!-- main button -->
+      <main>
+          <!-- user selection -->
+          <section class="user">
+              <h3>You Picked</h3>
+              <article  class="scissors" aria-label="button" data-button="scissors">
+            <div class="grey">
+              <div class="scissors_img"></div>
+            </div>
+          </article>
+        </div>
+          </section>
+          <!-- play again button -->
+          <section class="play_again">
+              <h1>You Win</h1>
+                <button>Play Again</button>
+          </section>
+          <!-- comps pick -->
+          <section class="comps-pick">
+              <h3>The House Picked</h3>
+              <article  class="blank" aria-label="button">
+            
+          </article>
+        </div>
+          </section>
+      </main>
+      <!-- button to show modal -->
+      <div class="btn">
+        <button>Rules</button>
+      </div>
+      <!-- modal for rules -->
+      <div class="modal">
+        <div class="modal-content">
+          <h2>RULES</h2>
+          <img src="./images/image-rules-bonus.svg" alt="image-rules-bonus" />
+          <button id="close"></button>
+        </div>
+      </div>
+    <script src="./src/computerRender.js" type="module"></script>
+</body>
+</html>
