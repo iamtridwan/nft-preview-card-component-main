@@ -47,7 +47,7 @@ setTimeout(() => {
   currentScore = currentScore + score;
   scoreText.textContent = currentScore;
   sessionStorage.setItem("score", currentScore);
-  play.style.display = "flex";
+  displayPlay();
   let backBtn = document.querySelector(".play_again button");
   let h1 = document.querySelector(".play_again h1");
   h1.innerHTML = remark;
@@ -55,3 +55,20 @@ setTimeout(() => {
     window.location.href = "index.html";
   });
 }, 800);
+
+// animation of the play again button
+function displayPlay() {
+  setTimeout(() => {
+    play.style.display = "flex";
+    animateElem(play);
+  }, 100);
+}
+
+function animateElem(elem) {
+  const appear = [
+    { opacity: "0", transform: "scale(0)" },
+    { opacity: "1", transform: "scale(1)" },
+  ];
+  const timming = { duration: 600, easing: "ease" };
+  elem.animate(appear, timming);
+}

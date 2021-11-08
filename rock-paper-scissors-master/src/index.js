@@ -24,5 +24,3 @@ btn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   document.body.classList.remove("show-modal");
 });
-
-// scoreText.textContent = parseInt(localStorage.getItem("score"));
