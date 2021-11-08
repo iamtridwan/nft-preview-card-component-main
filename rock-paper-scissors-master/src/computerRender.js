@@ -1,5 +1,7 @@
 import renderBtn from "./render.js";
+import { decision } from "./gameLogic.js";
 
+let scoreText = document.querySelector("header h1");
 const btn = document.querySelector(".btn button");
 const closeBtn = document.getElementById("close");
 btn.addEventListener("click", () => {
@@ -34,12 +36,21 @@ const page = (pageName) => {
   let compsPick = rem_choices[randomNum];
   return compsPick;
 };
-
-// renering computers decision
+// get current score
+let currentScore = parseInt(sessionStorage.getItem("score"));
+scoreText.textContent = currentScore;
+// rendering computers decision
 setTimeout(() => {
-  blank.innerHTML = renderBtn(page(pageClicked));
+  let comp = page(pageClicked);
+  blank.innerHTML = renderBtn(comp);
+  const [remark, score] = decision(pageClicked, comp);
+  currentScore = currentScore + score;
+  scoreText.textContent = currentScore;
+  sessionStorage.setItem("score", currentScore);
   play.style.display = "flex";
   let backBtn = document.querySelector(".play_again button");
+  let h1 = document.querySelector(".play_again h1");
+  h1.innerHTML = remark;
   backBtn.addEventListener("click", () => {
     window.location.href = "index.html";
   });

@@ -1,3 +1,5 @@
+"use strict";
+
 const renderBtn = (pick) => {
   switch (pick) {
     case "scissors":

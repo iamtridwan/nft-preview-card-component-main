@@ -1,5 +1,15 @@
-// showing and hiding modal for game rule
+// import { score } from "./gameLogic.js";
 
+let scoreText = document.querySelector("header h1");
+// create initial start values for score
+
+if (sessionStorage.length <= 1) {
+  sessionStorage.setItem("score", 0);
+} else {
+  scoreText.textContent = sessionStorage.getItem("score");
+}
+
+// showing and hiding modal for game rule
 const btn = document.querySelector("button");
 const closeBtn = document.getElementById("close");
 btn.addEventListener("click", () => {
@@ -15,18 +25,4 @@ closeBtn.addEventListener("click", () => {
   document.body.classList.remove("show-modal");
 });
 
-// const bounce = [
-//   {
-//     opacity: "0",
-//   },
-//   {
-//     opacity: "1",
-//   },
-// ];
-
-// const timming = {
-//   duration: "1000",
-//   easing: "ease",
-// };
-
-// closeBtn.animate(bounce, timming);
+// scoreText.textContent = parseInt(localStorage.getItem("score"));
