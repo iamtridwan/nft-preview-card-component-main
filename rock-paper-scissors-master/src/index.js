@@ -1,8 +1,6 @@
-// import { score } from "./gameLogic.js";
-
 let scoreText = document.querySelector("header h1");
-// create initial start values for score
 
+// create initial start values for score
 if (sessionStorage.length <= 1) {
   sessionStorage.setItem("score", 0);
 } else {
